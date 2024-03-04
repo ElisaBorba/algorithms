@@ -32,8 +32,3 @@ def study_schedule(permanence_period, target_time):
         return None
 
     return count_students_present(permanence_period, target_time)
-
-
-permanence_period = [(2, 2), (1, 2), (2, 3), (1, 5), (4, 5), (4, 5)]
-target_time = 2
-print(study_schedule(permanence_period, target_time))
