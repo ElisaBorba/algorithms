@@ -29,7 +29,16 @@ def merge(left, right, merged):
 
 def is_anagram(first_string, second_string):
     if not first_string or not second_string:
-        return ("", "", False)
+        if first_string:
+            first_sorted = list(first_string.lower())
+            first_merge_sorted = merge_sort(first_sorted)
+            return ("".join(first_merge_sorted), "", False)
+        elif second_string:
+            second_sorted = list(second_string.lower())
+            second_merge_sorted = merge_sort(second_sorted)
+            return ("", "".join(second_merge_sorted), False)
+        else:
+            return ("", "", False)
 
     first_sorted = list(first_string.lower())
     second_sorted = list(second_string.lower())
@@ -42,10 +51,3 @@ def is_anagram(first_string, second_string):
         "".join(second_merge_sorted),
         "".join(first_merge_sorted) == "".join(second_merge_sorted),
     )
-
-
-# print(is_anagram("amor", "roma"))  # saída: ('amor', 'amor', True)
-# print(is_anagram("pedra", "perda"))  # saída: ('adepr', 'adepr', True)
-# print(is_anagram("pato", "tapo"))  # saída: ('aopt', 'aopt', True)
-# print(is_anagram("Amor", "Roma"))  # saída: ('amor', 'amor', True)
-# print(is_anagram("coxinha", "empada"))  # saída: ('achinox', 'aademp', False)
