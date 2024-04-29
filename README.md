@@ -1,6 +1,6 @@
 # Algorithms
 
-Uma série de de desafios lógicos, resolvidos em Python.
+Uma série de desafios lógicos resolvidos em Python.
 
 ## Desafios
 * **challenge_anagrams.py:** Funções para ordenar arrays usando o algoritmo de merge sort, e verifica se duas strings são anagramas.
